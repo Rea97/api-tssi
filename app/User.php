@@ -29,6 +29,11 @@ class User extends Authenticatable implements JWTSubject
         'password', 'remember_token',
     ];
 
+    public function viewLogs()
+    {
+        return $this->hasMany(ViewLog::class);
+    }
+
     /**
      * Automatically creates hash for the user password.
      *

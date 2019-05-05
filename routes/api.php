@@ -19,11 +19,13 @@ $api->version('v1', function (Router $api) {
     });
 
     $api->group(['middleware' => 'jwt.auth'], function(Router $api) {
+        $api->post('/view-logs', 'App\\Api\\V1\\Controllers\\ViewLogController@store');
+
         $api->get('refresh', [
             'middleware' => 'jwt.refresh',
             function() {
                 return response()->json([
-                    'message' => 'By accessing this endpoint, you can refresh your access token at each request. Check out this response headers!'
+                    'message' => 'ok'
                 ]);
             }
         ]);
