@@ -15,7 +15,7 @@
 					"formdata": [
 						{
 							"key": "imdb_id",
-							"value": "tt0100669",
+							"value": "550",
 							"description": "",
 							"type": "text"
 						}
@@ -287,6 +287,42 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Recommendations Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{base_url}}/recommendations",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"recommendations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recommendations List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{base_url}}/recommendations",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"recommendations"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"auth": {
@@ -323,14 +359,14 @@
 	],
 	"variable": [
 		{
-			"id": "6e9046dd-515c-4cce-b8bc-07349c51ed14",
+			"id": "8e425f12-0d37-489e-a444-552a4448a90a",
 			"key": "token",
-			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdHNzaS50ZXN0L2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNTU3MDMxNDIwLCJleHAiOjE1NTcwMzUwMjAsIm5iZiI6MTU1NzAzMTQyMCwianRpIjoiNjYwMDVvSVRzaGpiclAzVCIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.OGCGW8lm6HEx__Zf_vSUqbVnED2gRaFZlJ6NgLNPVsw",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdHNzaS50ZXN0L2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNTU3NjMyODg3LCJleHAiOjE1NTc2MzY0ODcsIm5iZiI6MTU1NzYzMjg4NywianRpIjoiMUJlZ3RUaHJBRVQ3RUZFcCIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.m95hXfWhVHinPPpFeeCn3eecY3mlzHD3Bslve3LCDEY",
 			"type": "string",
 			"description": ""
 		},
 		{
-			"id": "26e2ec6b-95cc-48d1-8340-b187cc46ad79",
+			"id": "ae2d85f4-fc68-456d-9d7a-ea4826cdeb93",
 			"key": "base_url",
 			"value": "http://tssi.test/api",
 			"type": "string",
