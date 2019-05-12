@@ -20,6 +20,8 @@ $api->version('v1', function (Router $api) {
 
     $api->group(['middleware' => 'jwt.auth'], function(Router $api) {
         $api->post('/view-logs', 'App\\Api\\V1\\Controllers\\ViewLogController@store');
+        $api->get('/recommendations', 'App\\Api\\V1\\Controllers\\RecommendationController@index');
+        $api->post('/recommendations', 'App\\Api\\V1\\Controllers\\RecommendationController@store');
 
         $api->get('refresh', [
             'middleware' => 'jwt.refresh',

@@ -34,6 +34,11 @@ class User extends Authenticatable implements JWTSubject
         return $this->hasMany(ViewLog::class);
     }
 
+    public function recommendations()
+    {
+        return $this->hasMany(Recommendation::class);
+    }
+
     /**
      * Automatically creates hash for the user password.
      *
